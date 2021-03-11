@@ -7,17 +7,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default Todo = ({ todo, onRemove }) => {
+export default Todo = ({ todo, onRemove, o }) => {
   const [isSelected, setSelection] = useState(false);
-
-  // isSelected ? onRemove(todo.id) : null;
+  const onEdit = () => {};
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.3}
-      // onPress={onRemove.bind(null, todo.id)}
-      // onLongPress={onRemove.bind(null, todo.id)}
-    >
+    <TouchableOpacity activeOpacity={0.4} onPress={o}>
       <View style={styles.todo}>
         <Text>{todo.title}</Text>
         <CheckBox
